@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800 mb-6 sm:mb-16">
+        <div class="container px-6 py-4 mx-auto">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="flex items-center justify-between">
+                    <a href="#">
+                        <h1 class="text-3xl text-gray-900 font-bold dark:text-white"> Mart</h1>
+                    </a>
+    
+                    <!-- Mobile menu button -->
+                    <div class="flex lg:hidden">
+                        <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                            </svg>
+                    
+                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+                    <div class="flex flex-col -mx-6 lg:flex-row lg:items-center lg:mx-8">
+                        <a href="#" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                        <a href="shop.html" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Shop</a>
+                        <a href="#" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Random Item</a>
+                        <a href="#" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Experts</a>
+                    </div>
+    
+                    <div class="relative mt-4 md:mt-0">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+        
+                        <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- <section class="bg-gray-100 dark:bg-gray-800 py-4 sm:py-12">
+        <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center">
+            <h2 class="text-4xl font-extrabold dark:text-white">Product Details</h2>
+    
+            <p class="max-w-4xl mt-6 text-center text-gray-500 dark:text-gray-300">
+                HOME / Product Details
+            </p>
+        </div>
+    </section> -->
+    <div class="flex ">
+        <h2 class=" mx-auto text-4xl font-bold dark:text-white">Kettle</h2>
+    </div>
+    <div class="flex ">
+      <div class="flex mx-auto items-center mt-2.5 mb-5">
+          <svg class="w-4 h-4 text-yellow-300 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+          </svg>
+          <svg class="w-4 h-4 text-yellow-300 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+          </svg>
+          <svg class="w-4 h-4 text-yellow-300 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+          </svg>
+          <svg class="w-4 h-4 text-yellow-300 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+          </svg>
+          <svg class="w-4 h-4 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+              <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+          </svg>
+        </div>
+      </div>  
+    <div class="p-8 sm:p-16 grid grid-cols-1 gap-6 sm:grid-cols-2 ">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-4 md:gap-6">
+          <div class="col-span-1">
+              <div class="grid grid-cols-4 gap-1 md:grid-cols-1 md:gap-6">
+                  <div class="flex justify-center">
+                      <div x-data="{ isPressed: false }"
+                          x-bind:class="{ 'scale-95': isPressed }"
+                          x-on:mousedown="isPressed = true"
+                          x-on:mouseup="isPressed = false"
+                          x-on:mouseleave="isPressed = false"
+                          class="transition-transform transform-gpu">
+                          <img class="w-20 md:w-32" id="img1" src="https://htmldemo.net/tmart/tmart/images/product-details/big-img/10.jpg" alt="dashboard image">
+                      </div>
+                  </div>
+                  <div class="flex justify-center">
+                      <div x-data="{ isPressed: false }"
+                          x-bind:class="{ 'scale-95': isPressed }"
+                          x-on:mousedown="isPressed = true"
+                          x-on:mouseup="isPressed = false"
+                          x-on:mouseleave="isPressed = false"
+                          class="transition-transform transform-gpu">
+                          <img class="w-20 md:w-32" id="img2" src="https://htmldemo.net/tmart/tmart/images/product-details/big-img/12.jpg" alt="dashboard image">
+                      </div>
+                  </div>
+                  <div class="flex justify-center">
+                      <div x-data="{ isPressed: false }"
+                          x-bind:class="{ 'scale-95': isPressed }"
+                          x-on:mousedown="isPressed = true"
+                          x-on:mouseup="isPressed = false"
+                          x-on:mouseleave="isPressed = false"
+                          class="transition-transform transform-gpu">
+                          <img class="w-20 md:w-32" id="img3" src="https://htmldemo.net/tmart/tmart/images/product-details/big-img/11.jpg" alt="dashboard image">
+                      </div>
+                  </div>
+                  <div class="flex justify-center">
+                      <div x-data="{ isPressed: false }"
+                          x-bind:class="{ 'scale-95': isPressed }"
+                          x-on:mousedown="isPressed = true"
+                          x-on:mouseup="isPressed = false"
+                          x-on:mouseleave="isPressed = false"
+                          class="transition-transform transform-gpu">
+                          <img class="w-20 md:w-32" id="img4" src="https://htmldemo.net/tmart/tmart/images/product-details/big-img/10.jpg" alt="dashboard image">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Second Column: Single Image (Mobile and Larger Screens) -->
+          <div class="col-span-1 md:col-span-3">
+              <div class="flex justify-center md:py-auto">
+                  <div x-data="{ isPressed: false }"
+                      x-bind:class="{ 'scale-95': isPressed }"
+                      x-on:mousedown="isPressed = true"
+                      x-on:mouseup="isPressed = false"
+                      x-on:mouseleave="isPressed = false"
+                      class="transition-transform transform-gpu">
+                    <img class="w-full mt-8 transition duration-500 ease-in-out transform hover:scale-105" id="dispImage" src="https://htmldemo.net/tmart/tmart/images/product-details/big-img/12.jpg" alt="dashboard image">            </div>
+              </div>
+          </div>
+      </div>
+
+
+        <div class="mt-8">
+              <p class="mb-7 text-gray-500 dark:text-gray-400">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+            <span class="mt-5 text-2xl font-xl text-gray-900 line-through dark:text-white">$109</span><span class="ml-3 text-3xl font-xl text-red-500">$79</span>
+            <h3 class=" mt-5 text-2xl font-bold text-gray-900 dark:text-white"> Choose color</h3>
+            <div class="flex mt-5">
+              <a href="#" class="mr-4 flex w-5 h-5 transition duration-500 ease-in-out transform hover:scale-125 bg-purple-500 rounded-full"></a>
+              <a href="#" class="mr-4 flex w-5 h-5 transition duration-500 ease-in-out transform hover:scale-125 bg-red-500 rounded-full"></a>
+              <a href="#" class="mr-4 flex w-5 h-5 transition duration-500 ease-in-out transform hover:scale-125 bg-pink-500 rounded-full"></a>
+              <a href="#" class="mr-4 flex w-5 h-5 transition duration-500 ease-in-out transform hover:scale-125 bg-yellow-500 rounded-full"></a>
+            </div>
+            <h3 class=" mt-7 text-2xl font-bold text-gray-900 dark:text-white"> Size</h3>
+            <div class="flex mt-5">
+              <a href="#" class="mr-4 text-gray-900 dark:text-white transition duration-300 transform hover:text-red-400 rounded-full">M</a>
+              <a href="#" class="mr-4 text-gray-900 dark:text-white transition duration-300 transform hover:text-red-400 rounded-full">ML</a>
+              <a href="#" class="mr-4 text-gray-900 dark:text-white transition duration-300 transform hover:text-red-400 rounded-full">XL</a>
+              <a href="#" class="mr-4 text-gray-900 dark:text-white transition duration-300 transform hover:text-red-400 rounded-full">XXL</a>
+            </div>
+            <div class="flex mt-7 ">
+              <h3 class=" text-2xl mr-5 font-bold text-gray-900 dark:text-white"> Quantity:</h3>
+              <button id="decreaseBtn" class="text-xl mr-5 transition duration-300 transform hover:text-red-400 text-gray-900 dark:text-white rounded-lg">-</button>
+              <span id="quantity" class=" text-xl text-gray-900 dark:text-white">1</span>
+              <button id="increaseBtn" class="text-xl ml-5 transition duration-300 transform hover:text-red-400 text-gray-900 dark:text-white rounded-lg">+</button>
+            </div>
+            <div class="flex space-x-2 mt-7">
+              <button type="button" class="transition duration-200 transform text-gray-700 border border-gray-700 hover:bg-red-500 hover:border-red-500 hover:text-white font-medium text-m p-2.5 text-center inline-flex items-center dark:border-gray-100 dark:text-gray-100 dark:hover:text-white dark:focus:ring-red-500 dark:hover:bg-red-500">
+                <span class="mx-12">Buy Now</span>
+              </button>
+              <button type="button" class="transition duration-200 transform text-gray-700 border border-gray-700 hover:bg-red-500 hover:border-red-500 font-medium text-m p-2.5 text-center inline-flex items-center dark:border-gray-100 dark:text-gray-100 dark:hover:text-white dark:focus:ring-red-500 dark:hover:bg-red-500 hover:shadow-md">
+                <svg class="w-6 h-6 mx-2 text-gray-800 dark:text-white hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 19">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4C5.5-1.5-1.5 5.5 4 11l7 7 7-7c5.458-5.458-1.542-12.458-7-7Z"/>
+                </svg>
+              </button>
+              <button type="button" class="transition duration-200 transform text-gray-700 border border-gray-700 hover:bg-red-500 hover:border-red-500 hover:text-white font-medium text-m p-2.5 text-center inline-flex items-center dark:border-gray-100 dark:text-gray-100 dark:hover:text-white dark:focus:ring-red-500 dark:hover:bg-red-500 hover:shadow-md">
+                <svg class="w-6 h-6 mx-2 text-gray-800 dark:text-white hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
+                </svg>
+              </button>
+            </div>
+            
+          </div>
+        </div>  
+        <div x-data="{ activeTab: 'details' }">
+          <div class="flex justify-center text-lg font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+              <ul class="flex flex-wrap -mb-px">
+                  <li class="mr-2">
+                      <a href="#details" id="click_detail" class="nav-link inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                         x-bind:class="{ 'active': activeTab === 'details' }"
+                         x-on:click.prevent="activeTab = 'details'">Details</a>
+                  </li>
+                  <li class="mr-2">
+                      <a href="#features" id="click_features" class="nav-link inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                         x-bind:class="{ 'active': activeTab === 'features' }"
+                         x-on:click.prevent="activeTab = 'features'">Reviews</a>
+                  </li>
+                  <li class="mr-2">
+                      <a href="#data" id="click_data" class="nav-link inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                         x-bind:class="{ 'active': activeTab === 'data' }"
+                         x-on:click.prevent="activeTab = 'data'">Data Sheet</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      
+      
+    <div class="p-8 sm:px-32">
+        <div id="details" style="display: block;">
+            <h3 class="text-3xl text-gray-900 dark:text-gray-100">Details</h3>
+            <p class="mt-4 text-gray-900 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quo, cupiditate accusantium expedita, corrupti pariatur consequatur delectus ut rem deleniti labore placeat doloribus corporis ab totam repellat quisquam recusandae. Debitis?</p>
+        </div>
+        <div id="features" style="display: none;">
+            <h3 class="mt-4 text-3xl text-gray-900 dark:text-gray-100">Reviews</h3>
+            <ul class="mt-4  space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+
+            <figure class="max-w-screen-md mx-auto text-center">
+                <svg class="w-10 h-10 mx-auto mb-3 text-gray-400 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                    <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+                </svg>
+                <blockquote>
+                    <p class="text-2xl italic font-medium text-gray-900 dark:text-white">"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                    <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
+                        <cite class="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</cite>
+                        <cite class="pl-3 text-sm text-gray-500 dark:text-gray-400">CEO at Google</cite>
+                    </div>
+                </figcaption>
+            </figure>
+                
+            </ul>
+        </div>
+        <div id="data" style="display: none;">
+            <h3 class="mt-4 text-3xl text-gray-900 dark:text-gray-100">Data Sheet</h3>
+            <ul class="mt-4 max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                <li>Ea sunt veniam voluptatem quasi mollitia quam impedit</li>
+                <li>Laudantium quaerat dolore iure incidunt</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate</li>
+                <li>Irure dolor in reprehenderit in voluptate velit esse</li>
+                <li>Sed do eiusmod tempor incididunt ut labore et</li>
+            </ul>
+        </div>
+    </div>
+
+
+<footer class="bg-gray-200 dark:bg-gray-800">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="https://flowbite.com/" class="flex items-center">
+              <h1 class="text-3xl text-gray-900 font-bold dark:text-white"> Mart</h1>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="" class="hover:underline">Mart</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                      <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                      <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                  </svg>
+                <span class="sr-only">Discord community</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                  <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">GitHub account</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Dribbble account</span>
+            </a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    <script>
+      const img1 = document.getElementById('img1');
+      const img2 = document.getElementById('img2');
+      const img3 = document.getElementById('img3');
+      const img4 = document.getElementById('img4');
+      const dispImage = document.getElementById('dispImage');
+    
+      img1.addEventListener('click', () => {
+        dispImage.src = img1.src;
+      });
+    
+      img2.addEventListener('click', () => {
+        dispImage.src = img2.src;
+      });
+    
+      img3.addEventListener('click', () => {
+        dispImage.src = img3.src;
+      });
+    
+      img4.addEventListener('click', () => {
+        dispImage.src = img4.src;
+      });
+
+
+      const decreaseBtn = document.getElementById('decreaseBtn');
+      const increaseBtn = document.getElementById('increaseBtn');
+      const quantitySpan = document.getElementById('quantity');
+
+      let quantity = 1;
+
+      decreaseBtn.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          quantitySpan.textContent = quantity;
+        }
+      });
+
+      increaseBtn.addEventListener('click', () => {
+        quantity++;
+        quantitySpan.textContent = quantity;
+      });
+
+      const detailLink = document.getElementById('click_detail');
+        const featuresLink = document.getElementById('click_features');
+        const dataLink = document.getElementById('click_data');
+        const detailsSection = document.getElementById('details');
+        const featuresSection = document.getElementById('features');
+        const dataSection = document.getElementById('data');
+
+        detailLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            detailsSection.style.display = 'block';
+            featuresSection.style.display = 'none';
+            dataSection.style.display = 'none';
+        });
+
+        featuresLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            detailsSection.style.display = 'none';
+            featuresSection.style.display = 'block';
+            dataSection.style.display = 'none';
+        });
+
+        dataLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            detailsSection.style.display = 'none';
+            featuresSection.style.display = 'none';
+            dataSection.style.display = 'block';
+        });
+
+    </script>
+    
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.3.0/dist/alpine.min.js" defer></script>
+
+</body>
+</html>
